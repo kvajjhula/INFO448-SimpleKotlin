@@ -52,41 +52,6 @@ class Person(var firstName: String, var lastName: String, var age: Int) {
 }
 
 // write a class "Money" with amount and currency, and define a convert() method and the "+" operator
-//
-//class Money(var amount: Int, var currency: String) {
-//    init {
-//        require(amount > 0)
-//        require(currency in setOf("USD", "EUR", "CAN", "GBP")) { "Invalid currency" }
-//    }
-//    fun convert(targetCurrency: String): Money {
-//        if (targetCurrency == currency) {
-//            return Money(amount, currency)
-//        }
-//
-//        val convertedAmount = when (currency to targetCurrency) {
-//            "USD" to "GBP" -> amount / 2
-//            "USD" to "EUR" -> amount * 1.5
-//            "USD" to "CAN" -> (amount * 5) / 4
-//            "GBP" to "USD" -> amount * 2
-//            "GBP" to "EUR" -> amount * 3
-//            "GBP" to "CAN" -> (amount * 5) / 2
-//            "EUR" to "USD" -> (amount * 2) / 3
-//            "EUR" to "GBP" -> amount / 3
-//            "EUR" to "CAN" -> (amount * 5) / 6
-//            "CAN" to "USD" -> (amount * 4) / 5
-//            "CAN" to "EUR" -> (amount * 6) / 5
-//            "CAN" to "GBP" -> (amount * 2) / 5
-//            else -> throw IllegalArgumentException("Unsupported conversion")
-//        }
-//
-//        return Money(convertedAmount, targetCurrency)
-//    }
-//
-//    operator fun plus(other: Money): Money {
-//        val otherConverted = other.convert(this.currency)
-//        return Money(this.amount + otherConverted.amount, this.currency)
-//    }
-//}
 
 class Money(var amount: Int, var currency: String) {
     init {
